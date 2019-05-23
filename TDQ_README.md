@@ -23,7 +23,7 @@ In order for the JSON Configuration file to be produced the following inputs are
 
 ## Installation
 ### *Prerequisites*  
-If you dont have `pyinstaller` or the TDDA python module refer to the below links to install:  
+If you dont have `pyinstaller` or the **TDDA python module** refer to the below links to install:  
 
 **TDDA Python Module**:
 * http://www.tdda.info/obtaining-the-python-tdda-library: `discover_df` in `tdda.constraints` is used to discover constraints in the data.  
