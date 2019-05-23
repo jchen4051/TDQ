@@ -22,24 +22,24 @@ In order for the JSON Configuration file to be produced the following inputs are
 * ***Constraints(optional)***: verifies datasets meet the constraints in the JSON configuration files
 
 ## Installation
-### Prerequisites  
+### *Prerequisites*  
 If you dont have `pyinstaller` or the TDDA python module refer to the below links to install:  
 
 **TDDA Python Module**:   
-* http://www.tdda.info/obtaining-the-python-tdda-library - `discover_df` in `tdda.constraints` is used to discover constraints in the data.  
+* http://www.tdda.info/obtaining-the-python-tdda-library: `discover_df` in `tdda.constraints` is used to discover constraints in the data.  
 
 **Pyinstaller**: 
-* https://pypi.org/project/PyInstaller/  
+* https://pypi.org/project/PyInstaller/: collects information about your Python script and all modules and libraries your script needs to execute.    
 
-### Steps
+### *Steps*
 
-From the filepath where the two python scripts are located, install TDQ_GUI.py as single executable application using pyinstaller:  
+From the command line install TDQ_GUI.py as a single executable application using pyinstaller:  
 
     pyinstaller.exe --onefile --windowed TDQ_GUI.py
 
-* *--onefile* is used to package everything into a single executable. If you do not specify this option, the libraries, etc. will be distributed as separate files alongside the main executable.  
+* `--onefile` is used to package everything into a single executable. If you do not specify this option, the libraries, etc. will be distributed as separate files alongside the main executable.  
 
-* *--windowed* prevents a console window from being displayed when the application is run. If you're releasing a non-graphical application (i.e. a console application), you do not need to use this option.  
+* `--windowed` prevents a console window from being displayed when the application is run. If you're releasing a non-graphical application (i.e. a console application), you do not need to use this option.  
 
 This will install the application as **TDQ_GUI.exe** in the newly created folder *dist*.  
 
