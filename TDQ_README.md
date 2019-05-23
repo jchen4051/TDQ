@@ -55,45 +55,45 @@ Refer to **Application Inputs** for further information on the inputs requested 
 
 ## Example Configuration File   
     {
-    "delimiter": ",",
-    "enclosedinquotes": "<EDIT HERE>",
-    "maximumrows": "<EDIT HERE>",
-    "partition_col": "<EDIT HERE>",
-    "list_of_partitions": [
-        "<EDIT HERE>",
-        "<EDIT HERE>",
-        "<EDIT HERE>",
-        "<EDIT HERE>"
-    ],
-    "noOfCOl": 44,
-    "header": "<EDIT HERE>",
-    "fields": {
-        "SourceUnitName": {
-            "datatype": "string",
-            "min_length": 12,
-            "max_length": 12,
-            "nullable": "false",
-            "listofvalues": [
-                "BND2-ASG-001"
-            ]
-        },
-        "PeriodStartTime": {
-            "datatype": "string",
-            "min_length": 24,
-            "max_length": 24,
-            "nullable": "false",
-            "listofvalues": [
-                "2019-03-13T18:55:00+1100"
-            ]
-        },
-        "PeriodEndTime": {
-            "datatype": "string",
-            "min_length": 24,
-            "max_length": 24,
-            "nullable": "false",
-            "listofvalues": [
-                "2019-03-13T19:00:00+1100"
-            ]
+        "delimiter": ",",
+        "enclosedinquotes": "<EDIT HERE>",
+        "maximumrows": "<EDIT HERE>",
+        "partition_col": "<EDIT HERE>",
+        "list_of_partitions": [
+            "<EDIT HERE>",
+            "<EDIT HERE>",
+            "<EDIT HERE>",
+            "<EDIT HERE>"
+        ],
+        "noOfCOl": 44,
+        "header": "<EDIT HERE>",
+        "fields": {
+            "SourceUnitName": {
+                "datatype": "string",
+                "min_length": 12,
+                "max_length": 12,
+                "nullable": "false",
+                "listofvalues": [
+                    "BND2-ASG-001"
+                ]
+            },
+            "PeriodStartTime": {
+                "datatype": "string",
+                "min_length": 24,
+                "max_length": 24,
+                "nullable": "false",
+                "listofvalues": [
+                    "2019-03-13T18:55:00+1100"
+                ]
+            },
+            "PeriodEndTime": {
+                "datatype": "string",
+                "min_length": 24,
+                "max_length": 24,
+                "nullable": "false",
+                "listofvalues": [
+                    "2019-03-13T19:00:00+1100"
+                ]
         },...
 
 ## Additional Information  
