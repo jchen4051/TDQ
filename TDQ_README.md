@@ -1,4 +1,4 @@
-# TDQ Configuration File Generation and Application Installation
+# TDQ Configuration File Application
 ## Description
 The UI application generates a TDQ JSON configuration file with additional metadata about the curation process, such as fields(Schema) and the data quality rules to be applied. The purpose of generating the configuration file is to remove the bulk of the manual work required in creating the file itself.
 
@@ -25,17 +25,17 @@ In order for the JSON Configuration file to be produced the following inputs are
 ### *Prerequisites*  
 If you dont have `pyinstaller` or the TDDA python module refer to the below links to install:  
 
-**TDDA Python Module**:   
+**TDDA Python Module**:
 * http://www.tdda.info/obtaining-the-python-tdda-library: `discover_df` in `tdda.constraints` is used to discover constraints in the data.  
 
-**Pyinstaller**: 
+**Pyinstaller**:
 * https://pypi.org/project/PyInstaller/: collects information about your Python script and all modules and libraries your script needs to execute.    
 
-### *Steps*
+### *Installation Steps*
 
-From the command line install TDQ_GUI.py as a single executable application using pyinstaller:  
+From the command line install TDQ_GUI.py as a single executable application using pyinstaller from the file path the Python scripts are located:  
 
-    pyinstaller.exe --onefile --windowed TDQ_GUI.py
+    <File path> pyinstaller.exe --onefile --windowed TDQ_GUI.py
 
 * `--onefile` is used to package everything into a single executable. If you do not specify this option, the libraries, etc. will be distributed as separate files alongside the main executable.  
 
