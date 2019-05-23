@@ -13,22 +13,25 @@ To generate the JSON constraints file, two Python scripts have been created; one
 
 ## Application Inputs
 In order for the JSON Configuration file to be produced the following inputs are required:
-* *Raw data file*: file is in CSV format
+* ***Raw data file***: file is in CSV format
 
-* *Target file*: JSON configuration file to be generated at the specified file path
+* ***Target file***: JSON configuration file to be generated at the specified file path
 
-* *Delimiter*: sequence of one or more characters used to specify the boundary between separate, independent regions in plain text or other data streams. (e.g. "," in a sequence comma-seperated values)
+* ***Delimiter***: sequence of one or more characters used to specify the boundary between separate, independent regions in plain text or other data streams. (e.g. "," in a sequence comma-seperated values)
 
-* *Constraints(optional)*: verifies datasets meet the constraints in the JSON configuration files
+* ***Constraints(optional)***: verifies datasets meet the constraints in the JSON configuration files
 
 ## Installation
+### Prerequisites  
 If you dont have `pyinstaller` or the TDDA python module refer to the below links to install:  
 
-**TDDA Python Module**: 
-* http://www.tdda.info/obtaining-the-python-tdda-library  
+**TDDA Python Module**:   
+* http://www.tdda.info/obtaining-the-python-tdda-library - `discover_df` in `tdda.constraints` is used to discover constraints in the data.  
 
 **Pyinstaller**: 
-* https://pypi.org/project/PyInstaller/
+* https://pypi.org/project/PyInstaller/  
+
+### Steps
 
 From the filepath where the two python scripts are located, install TDQ_GUI.py as single executable application using pyinstaller:  
 
@@ -50,7 +53,7 @@ Refer to **Application Inputs** for further information on the inputs requested 
 6. Click ***Generate*** to start the file generation process. Success message will pop up once the file has been generated. 
 7. Click ***Clear*** to reset all fields. 
 
-## Example Configuration File
+## Example Configuration File   
     {
     "delimiter": ",",
     "enclosedinquotes": "<EDIT HERE>",
@@ -92,3 +95,8 @@ Refer to **Application Inputs** for further information on the inputs requested 
                 "2019-03-13T19:00:00+1100"
             ]
         },...
+
+## Additional Information  
+
+* `<EDIT HERE>` requires manual input from users in the configuration file.
+* Users should input a column header row in the CSV data if a header row isn't present already.
