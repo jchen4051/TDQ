@@ -1,17 +1,17 @@
-# TDQ Configuration File Application
+# TDQ Configuration File Generation
 ## Description
-The UI application generates a TDQ JSON configuration file with additional metadata about the curation process, such as fields(Schema) and the data quality rules to be applied. The purpose of generating the configuration file is to remove the bulk of the manual work required in creating the file itself.
+The TDQ JSON configuration file containts additional metadata about the curation process, such as fields(Schema) and the data quality rules to be applied. The purpose of generating the configuration file via the command line interface (CLI) or the UI application is to remove the bulk of the manual work required in creating the file itself.
 
 Users will still need to edit the file after it is produced for the TDQ Lambda to clean and apply TDQ rules defined in the configuration file. 
 
 ## Python Scripts
-To generate the JSON constraints file, two Python scripts have been created; one that creates the UI application to take user inputs and one that uses the inputs from the application to generate the configuration file.  
+To generate the JSON constraints file, two Python scripts have been created; one that creates the UI application to take user inputs and one that uses the inputs from the application to generate the configuration file. The python script that generates the configuration file can also be run via the CLI by parsing the necessary inputs.
 
-- **TDQ_GUI.py**: python source file to create UI application that takes users inputs and runs the JSON configuration file generator script(*TDQ_CONFIG_GENERATOR.py*) in the background.
+- **TDQ_GUIv2.py**: python source file to create UI application that takes users inputs and runs the JSON configuration file generator script(*TDQ_CONFIG_GENERATOR.py*) in the background.
 
-- **TDQ_CONFIG_GENERATOR.py**: takes the inputs from the UI application and generates a JSON constraints file. 
+- **TDQ_CONFIG_GENERATORv2.py**: takes the inputs from the UI application and generates a JSON constraints file. This file can also be run via the CLI to generate the configuration file (further information in **Generating via the CLI**).
 
-## Application Inputs
+## Inputs
 In order for the JSON Configuration file to be produced the following inputs are required:
 * ***Raw data file***: file is in CSV format
 
@@ -21,7 +21,7 @@ In order for the JSON Configuration file to be produced the following inputs are
 
 * ***Constraints(optional)***: verifies datasets meet the constraints in the JSON configuration files
 
-## Installation
+## Application Installation
 ### *Prerequisites*  
 If you dont have `pyinstaller` or the **TDDA python module** refer to the below links to install:  
 
@@ -52,6 +52,15 @@ Refer to **Application Inputs** for further information on the inputs requested 
 5. Select the constraints you want to search for in the data by checking the boxes 
 6. Click ***Generate*** to start the file generation process. Success message will pop up once the file has been generated. 
 7. Click ***Clear*** to reset all fields. 
+
+## Generating via the CLI
+Using the script **TDQ_CONFIG_GENERATORv2.py** enter the **inputs** as shown below via the CLI to generate the configuaration file:  
+
+    <File path> python TDQ_CONFIG_GENERATORv2.py -f <Data file path> -t <Output file path/name> -d "<Delimiter>" -c "[constraints list]"
+* `-f` Parse in the file path of the CSV data to be read. 
+* `-t` Users can specify the filepath and name where the configuration file is output. Alternatively specifying just the filename will output the file in the current file path. 
+* `-d` Users need to specify the delimiter between "". If no delimiter is specifed the default "," will be used. 
+* `-c` Users need to parse a list of constraints required in the configuration file between ""(e.g. "['constraint1', 'constraint2']"). 
 
 ## Example Configuration File   
     {
@@ -97,6 +106,5 @@ Refer to **Application Inputs** for further information on the inputs requested 
         },...
 
 ## Additional Information  
-
 * `<EDIT HERE>` requires manual input from users in the configuration file.
 * Users should input a column header row in the CSV data if a header row isn't present already.
