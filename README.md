@@ -15,7 +15,7 @@ The create the configuration template for a data feed the following inputs are r
 
 * ***-f Data feed***: the specific stream of data from the source system
 
-* ***-d Delimiter(option)***: sequence of one or more characters used to specify the boundary between separate, independent regions in plain text or other data streams. (e.g. "," in a sequence comma-seperated values). If no delimiter is specified the default ',' will be used. 
+* ***-d Delimiter(optional)***: sequence of one or more characters used to specify the boundary between separate, independent regions in plain text or other data streams. (e.g. "," in a sequence comma-seperated values). If no delimiter is specified the default ',' will be used. 
 
 ## Example Configuration Template File
     {
